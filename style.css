@@ -105,7 +105,7 @@ header nav.menu-desktop a:hover {
 }
 
 .menu-mobile{
-    background-color: #000;
+    background-color: rgb(194, 194, 219);
     height: 100vh;
     position: fixed;
     top: 0;
@@ -129,7 +129,7 @@ header nav.menu-desktop a:hover {
 }
 
 .menu-mobile .btn-fechar i{
-    color: #00FF08;
+    color: rgb(5, 5, 92);
     font-size: 30px;
 }
 
@@ -138,7 +138,7 @@ header nav.menu-desktop a:hover {
 }
 
 .menu-mobile nav ul li a{
-    color: #fff;
+    color: rgba(5, 5, 92, 0.63);
     font-size: 20px;
     font-weight: 300;
     padding: 20px 8%;
@@ -146,8 +146,8 @@ header nav.menu-desktop a:hover {
 }
 
 .menu-mobile nav ul li a:hover{
-    background-color: #00FF08;
-    color: #000;
+    background-color: #8f95b9;
+    color: #fff;
 }
 
 .overlay-menu{
