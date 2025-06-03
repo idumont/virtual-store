@@ -1,0 +1,775 @@
+/*ESTILO GERAL*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto";
+}
+
+body {
+    height: 100vh;
+    background-color: rgba(224, 225, 230, 0.932);
+}
+
+.user-select-none {
+    user-select: none;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h2 {
+    font-size: 36px;
+    color: rgb(5, 5, 92);
+    margin-top: 20px;
+    padding: 0 2%;
+    letter-spacing: 15px;
+}
+
+span {
+    color: rgb(250, 138, 10);
+}/*FIM ESTILO GERAL*/
+
+
+/*CABAÇALHO*/
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-desktop img {
+    width: 250px;
+}
+
+header>.interface {
+    padding: 40px 2%;
+}
+
+header a {
+    color: rgba(5, 5, 92, 0.63);
+    display: inline-block;
+    transition: .2s;
+    text-decoration: none;
+    transition: .2s;
+    font-family: "Bebas Neue";
+    font-size: 30px;
+    letter-spacing: 2px;
+    text-align: justify;
+}
+
+.menu-desktop {
+    display: flex;
+    align-items: center;
+}
+
+header nav.menu-desktop ul li {
+    display: inline-flex;
+    padding: 0 30px;
+    margin-left: 75px;
+}
+
+header nav.menu-desktop a:hover {
+    color: rgb(5, 5, 92);
+    transform: scale(1.05);
+    /*a propriedade transform só funciona p/ elementos block level. e todo link é inline level, 
+    não possuindo algumas propriedades como width, height e transform. precisa converter o link p/ block level(inline block)*/
+}
+
+.btn-contato button:hover {
+    padding: 12px 42px;
+    font-size: 17px;
+    color: #24034b;
+    letter-spacing: 7px;
+    box-shadow: 8px 10px 12px rgba(0, 0, 0, 0.5);
+}/*FIM CABAÇALHO*/
+
+
+/*ESTILO DO MENU MOBILE*/
+.btn-abrir-menu i{
+    color: rgb(5, 5, 92);
+    font-size: 40px;
+    visibility: hidden;
+}
+
+.menu-mobile{
+    background-color: #000;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.menu-mobile.abrir-menu{
+    width: 70%;
+}
+
+.menu-mobile.abrir-menu ~ overlay-menu{
+    display: block;
+}
+
+.menu-mobile .btn-fechar{
+    padding: 20px 5%;
+}
+
+.menu-mobile .btn-fechar i{
+    color: #00FF08;
+    font-size: 30px;
+}
+
+.menu-mobile nav ul{
+    text-align: right;
+}
+
+.menu-mobile nav ul li a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+}
+
+.menu-mobile nav ul li a:hover{
+    background-color: #00FF08;
+    color: #000;
+}
+
+.overlay-menu{
+    background-color: #000000a6;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+} /*FIM ESTILO DO MENU MOBILE*/
+
+
+/*CORPO DO SITE*/
+main .interface {
+    background-color: rgb(5, 5, 92);
+    max-width: 90%;
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+
+.main-sobre h1 {
+    letter-spacing: 5px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+main .interface img {
+    width: 50%;
+    border-radius: 20px;
+}
+
+main .interface .div-paragraph1-sobre {
+    max-width: 10%;
+    margin: 20px 15%;
+}
+
+.paragraph1-sobre {
+    font-size: 38px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    color: #a89e97;
+}
+
+.paragraph1-sobre:hover {
+    font-size: 40px;
+    color: #516797;
+}
+
+.btn-sobre {
+    margin-top: 40px;
+}
+
+.btn-sobre button {
+    background-color: #8f95b9;
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    color: #24034b;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+.btn-sobre button:hover {
+    color: #d1caf5;
+    cursor: pointer;
+    box-shadow: 8px 10px 12px rgba(0, 0, 0, 0.5);
+}/*FIM CORPO DO SITE*/
+
+
+/*ESTILO SERVIÇOS*/
+section.servicos {
+    padding: 2px 4%;
+    margin-bottom: 20px;
+}
+
+section.servicos .flex {
+    gap: 60px;
+}
+
+.servicos-box {
+    padding: 40px;
+    border-radius: 20px;
+    transition: .2s;
+    text-align: justify;
+    margin-top: 40px;
+    max-width: 400px;
+    transform: scale(1.05);
+    box-shadow: 4px 6px 8px rgba(5, 5, 92, 0.63);
+}
+
+.servicos-box:hover {
+    box-shadow: 4px 6px 8px rgb(5, 5, 92);
+}
+
+.servicos-box img {
+    width: 320px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.servicos-box h3 {
+    text-align: center;
+    font-size: 22px;
+    margin: 15px 0;
+    color: rgb(5, 5, 92);
+}/*FIM ESTILO SERVIÇOS*/
+
+
+/*ESTILO VITRINE*/
+section.vitrine {
+    padding: 2px 4%;
+}
+
+section .interface-vit {
+    background-color: rgba(5, 5, 92, 0.63);
+    max-width: 90%;
+    height: 100%;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 4%;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.vitrine-box {
+    background-color: #fff;
+    color: #242424;
+    width: 340px;
+    height: 300px;
+    border-radius: 20px;
+    margin-top: 30px;
+    transition: .2s;
+    margin-top: 0;
+}
+
+.comprar {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 2px;
+    margin-left: 10px;
+    max-width: 80%;
+}
+
+.comprar p {
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgba(6, 16, 153, 0.829);
+    font-family: "Bebas Neue";
+}
+
+.vitrine-box .btn-social-vit button {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    background-color: #06e42b;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 5px 30px;
+    transition: .2s;
+}
+
+.vitrine-box .btn-social-vit i {
+    font-size: 30px;
+    color: #fff;
+}
+
+.vitrine-box img {
+    width: 150px;
+    height: 140px;
+}
+
+.vitrine-box h3 {
+    margin-left: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 18px;
+    color: rgba(6, 16, 153, 0.829);
+}
+
+.p-vitrine {
+    max-width: 200px;
+    font-size: 18px;
+    margin-left: 5px;
+    font-family: "Bebas Neue";
+}/*FIM ESTILO VITRINE*/
+
+
+/*PÁGINA HTML SOBRE*/
+.interface-sobre {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sobre-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+#body-pag-sobre {
+    background-color: rgba(224, 225, 230, 0.932);
+}
+
+.img-sobre-pag {
+    margin-left: 25%;
+    width: 50%;
+    height: 40%;
+    margin-top: 30px;
+    border-radius: 40px;
+    margin-bottom: 80px;
+}
+
+.sobre-paragraph {
+    text-align: justify;
+    justify-content: center;
+    max-width: 70%;
+    font-size: 20px;
+    color: rgba(6, 16, 153, 0.829);
+    margin: auto;
+}
+
+#i-sobre {
+    font-size: 60px;
+    color: #0feb22;
+    align-items: center;
+    justify-content: center;
+}
+
+#i-sobre:hover {
+    font-size: 64px;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.span1 {
+
+    color: rgba(6, 16, 153, 0.829);
+    font-weight: bold;
+}
+
+.sobre-p3 {
+    font-size: 20px;
+    color: rgba(6, 16, 153, 0.829);
+}
+
+.sobre-p4 {
+    font-size: 38px;
+    color: rgba(6, 16, 153, 0.829);
+}/*FIM PÁGINA HTML SOBRE*/
+
+
+/*PÁGINA HTML SERVIÇOS*/
+#body-pag-service {
+    background-color: rgba(224, 225, 230, 0.932);
+}
+
+.titulo1 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.servicos-box1 {
+    padding: 20px;
+}
+
+.servicos-box1 img {
+    width: 530px;
+    height: 350px;
+    border-radius: 20px;
+    margin-left: 2%;
+}
+
+.servicos-box1 h3 {
+    text-align: center;
+    font-size: 25px;
+    margin: 15px 0;
+    color: #68636381;
+}
+
+.header-serv a {
+    color: rgba(5, 5, 92, 0.63);
+    display: inline-block;
+    transition: .2s;
+    text-decoration: none;
+    font-family: "Bebas Neue";
+    font-size: 30px;
+    letter-spacing: 3px;
+    text-align: justify;
+    margin: 40px 2%;
+}
+
+section.servicos1 .flex1 {
+    gap: 60px;
+}
+
+.header-serv .interface {
+    padding: 20px 2px;
+}
+
+.p-servicos1 {
+    max-width: 550px;
+    font-size: 22px;
+    color: rgb(5, 5, 92);
+    text-align: justify;
+}
+
+.servicos-box1:hover {
+    transform: scale(1.05);
+    box-shadow: 2px 4px 8px #22035cab;
+    border-radius: 30px;
+    margin-top: 40px;
+}/*FIM PÁGINA HTML SERVIÇOS*/
+
+
+/*FORMULÁRIO DE CONTATO*/
+.div-form {
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-top: 70px;
+}
+
+section .formulario {
+    padding: 80px 4%;
+
+}
+
+.titulo-form {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    background-color: #242424;
+    border: none;
+    outline: none;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+form textarea {
+    resize: none;
+    height: 200px;
+    max-height: 500px;
+}
+
+form .btn-enviar {
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar input {
+    width: 120px;
+    background-color: #8f95b9;
+    color: #242424;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 2s;
+    margin-bottom: 20px;
+}
+
+form .btn-enviar input:hover {
+    box-shadow: 0px 0px 8px rgb(5, 5, 92);
+    transform: scale(1.05);
+    color: #fff;
+}/*FORMULÁRIO DE CONTATO*/
+
+
+/*RODAPÉ*/
+footer {
+    padding: 40px 4%;
+    box-shadow: 0 0 40px 10px rgba(5, 5, 92, 0.63);
+}
+
+footer .flex {
+    justify-content: space-between;
+}
+
+footer .line-footer {
+    padding: 20px 0;
+}
+
+.logo-rodape {
+    width: 140px;
+}
+
+.borda {
+    border-top: 2px solid rgba(5, 5, 92, 0.63);
+}
+
+footer .line-footer p i {
+    color: #e68d09;
+    font-size: 22px;
+}
+
+footer .line-footer p a {
+    color: rgba(5, 5, 92, 0.63);
+}
+
+.btn-social button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: #8f95b9;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: .2s;
+}
+
+button:hover {
+    box-shadow: 2px 4px 8px rgba(5, 5, 92, 0.63);
+    transform: scale(1.05);
+}
+
+footer .bi-whatsapp {
+    color: #06e42b;
+}
+
+footer .bi-instagram {
+    color: #b60968;
+}
+
+footer .bi-facebook {
+    color: rgb(5, 5, 116);
+}/*FIM RODAPÉ*/
+
+
+
+@media screen and (max-width: 1020px) {
+
+    /*CLASSES GERAIS*/
+   .btn-abrir-menu i{
+        visibility: visible;
+    }
+
+    header>.interface {
+        padding: 2px;
+    }
+
+    .menu-desktop img {
+        width: 150px;
+        align-items: center;
+        margin-left: 10px;
+    }
+
+    main .interface {
+        flex-direction: column;
+    }
+
+    .flex {
+        flex-direction: column;
+    }
+
+    h2.titulo {
+        font-size: 34px;
+        line-height: 30PX;
+    }
+    /*FIM CLASSES GERAIS*/
+
+
+    /*CABEÇALHO*/
+    .link-menu {
+        visibility: hidden;
+    }
+
+    .paragraph1-sobre {
+        font-size: 26px;
+        letter-spacing: 2px;
+        margin: 0 10%;
+    }
+
+    .paragraph1-sobre:hover {
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
+    /*FIM CABEÇALHO*/
+
+
+    /*ESTILO SERVIÇOS*/
+
+    header>.interface {
+        padding: 20px 2%;
+    }
+
+    header a {
+        font-size: 2px;
+    }
+
+    .servicos-box {
+        padding: 40px;
+        border-radius: 20px;
+        transition: .2s;
+        text-align: justify;
+        margin-top: 40px;
+        max-width: 90%;
+    }
+
+    .servicos-box img {
+        width: 240px;
+        height: 140px;
+        border-radius: 10px;
+    }
+
+    .servicos-box h3 {
+        text-align: center;
+        font-size: 22px;
+        margin: 15px 0;
+        color: rgb(5, 5, 92);
+    }
+    /*FIM ESTILO SERVIÇOS*/
+
+
+    /*VITRINE*/
+    section .interface-vit {
+        flex-direction: column;
+    }
+    /*FIM VITRINE*/
+
+
+    /*SOBRE HTML*/
+    .body-pag-sobre .img-sobre-pag {
+        margin-left: 10%;
+        width: 80%;
+        height: 40%;
+        border-radius: 20px;
+    }
+
+    .sobre-paragraph {
+        max-width: 90%;
+    }
+    /*FIM SOBRE HTML*/
+
+
+    /*SERVIÇOS HTML*/
+    .header-serv .interface {
+        padding: 20px 2%;
+    }
+    
+    .header-serv a {
+        font-size: 1px;
+    }
+
+    .titulo1 {
+        text-align: center;
+        font-size: 35px;
+    }
+
+    .flex1 {
+        flex-direction: column;
+    }
+
+    .header-serv img {
+        width: 150px;
+        margin-left: 20px;
+    }
+
+    .servicos-box1 {
+        max-width: 90%;
+    }
+
+    .servicos-box1 img {
+        width: 300px;
+        height: 190px;
+        border-radius: 10px;
+    }
+
+    .servicos-box1 h3 {
+        text-align: center;
+        font-size: 28px;
+        margin: 15px 0;
+        color: #68636381;
+    }
+
+    .servicos-box1 h3:hover {
+        font-size: 30px;
+    }
+
+    .p-servicos1 {
+        max-width: 400px;
+        font-size: 22px;
+        color: rgb(5, 5, 92);
+        text-align: justify;
+    }
+    /*SERVIÇOS HTML*/
+
+
+    /*RODAPÉ*/
+    footer .flex {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    footer .line-footer {
+        text-align: center;
+    }
+    /*FIM RODAPÉ*/
+
+}
